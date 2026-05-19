@@ -1,8 +1,8 @@
 import twilio from 'twilio';
 
 const client = twilio(
-  process.env.TWILIO_ACCOUNT_SID!,
-  process.env.TWILIO_AUTH_TOKEN!
+  process.env.TWILIO_ACCOUNT_SID || 'ACdummy',
+  process.env.TWILIO_AUTH_TOKEN || 'dummy'
 );
 
 export async function sendAdminWhatsApp(order: {
